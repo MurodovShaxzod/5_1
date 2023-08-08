@@ -116,33 +116,33 @@ function searchFilter(e) {
 }
 
 
-// function ordersContentFunc() {
-//   menuContent.forEach((item) => {
-//     mainContentTitles.forEach((i) => {
-//       i.addEventListener("click", () => {
-//         // document.querySelector(".orders-section").style.display = "block"
-//         let row = document.createElement("div");
-//         row.innerHTML = `
-//         <div class="orders-content-title">
-//           <div class="orders-content-img"><img src="${item.image}" alt="img"></div>
-//           <div class="orders-content-text">
-//             <h3>${item.text}</h3>
-//             <span>$ ${item.price}</span>
-//           </div>
-//           <p class="qty">0</p>
-//           <p class="order-price">$ 4,58</p>
-//         </div>
-//         <div class="delete-content">
-//           <input type="text" placeholder="Please, just a little bit spicy only.">
-//           <button type="button" class="delete-btn"><i class='bx bx-trash-alt'></i></button>
-//         </div>
-//     `
-//         ordersContent.append(row);
-//       })
-//     })
-//   })
-// }
+function ordersContentFunc() {
+  menuContent.forEach((item) => {
+    document.querySelectorAll(".Appetizer").forEach((i) => {
+      i.addEventListener("click", () => {
+        // document.querySelector(".orders-section").style.display = "block"
+        let row = document.createElement("div");
+        row.innerHTML = `
+        <div class="orders-content-title">
+          <div class="orders-content-img"><img src="${item.image}" alt="img"></div>
+          <div class="orders-content-text">
+            <h3>${item.text}</h3>
+            <span>$ ${item.price}</span>
+          </div>
+          <p class="qty">0</p>
+          <p class="order-price">$ 4,58</p>
+        </div>
+        <div class="delete-content">
+          <input type="text" placeholder="Please, just a little bit spicy only.">
+          <button type="button" class="delete-btn"><i class='bx bx-trash-alt'></i></button>
+        </div>
+    `
+        ordersContent.append(row);
+      })
+    })
+  })
+};
 
-// ordersContentFunc();
+ordersContentFunc();
 
 menuContentFunc();
