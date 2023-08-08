@@ -1,0 +1,440 @@
+@import url(https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;800;900&display=swap);
+body {
+  background-color: #252836;
+  border-radius: 16px;
+  transition: 0.6s ease;
+  font-family: "Barlow", sans-serif;
+}
+
+section.sidebar {
+  background: #1f1d2b;
+  width: 104px;
+}
+section.sidebar .sidebar-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -120px;
+}
+section.sidebar .sidebar-container .logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 45px;
+}
+section.sidebar .sidebar-container .menu {
+  text-align: center;
+  color: #EA7C69;
+  margin: 0 auto;
+}
+section.sidebar .sidebar-container .menu .menu-active {
+  background-color: #252836;
+  padding: 16px;
+  border-left: 12px solid #1f1d2b;
+  border-radius: 30px 0px 0px 30px;
+}
+section.sidebar .sidebar-container .menu .menu-active i {
+  padding: 16px;
+  border-radius: 8px;
+  background: #EA7C69;
+  color: #fff;
+  box-shadow: 0px 8px 24px 0px rgba(234, 124, 105, 0.32);
+}
+section.sidebar .sidebar-container .menu div {
+  margin: 0 auto;
+  font-size: 20px;
+  padding: 32px 0;
+  cursor: pointer;
+}
+
+.main-section {
+  margin: 24px 38px 0 10px;
+  width: 100%;
+}
+.main-section header .header-text {
+  color: #FFF;
+  font-family: Barlow;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  margin: 0;
+}
+.main-section header .header-description {
+  color: #E0E6E9;
+  font-family: Barlow;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  margin: 0;
+}
+.main-section header .header-search {
+  border-radius: 8px;
+  border: 1px solid #393C49;
+  background: #2D303E;
+  display: flex;
+  padding: 14px;
+  align-items: center;
+}
+.main-section header .header-search i {
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  margin-right: 8px;
+}
+.main-section header .header-search input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #fff;
+}
+.main-section header .header-search input::-moz-placeholder {
+  color: #ABBBC2;
+  font-family: Barlow;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.main-section header .header-search input:-ms-input-placeholder {
+  color: #ABBBC2;
+  font-family: Barlow;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.main-section header .header-search input::placeholder {
+  color: #ABBBC2;
+  font-family: Barlow;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.main-section header nav {
+  margin-top: 24px;
+}
+.main-section header nav ul {
+  padding: 0;
+  border-bottom: 1px solid #393C49;
+  width: 100%;
+}
+.main-section header nav ul li {
+  color: #FFF;
+  font-family: Barlow;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  margin-right: 32px;
+  list-style: none;
+  cursor: pointer;
+}
+.main-section header nav ul .nav-active {
+  color: #EA7C69;
+  z-index: 10;
+  border-bottom: 3px solid #EA7C69;
+  padding-bottom: 10px;
+}
+.main-section main .choose-title h2 {
+  color: #FFF;
+  font-family: Barlow;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+.main-section main .choose-title div {
+  border-radius: 8px;
+  border: 1px solid #393C49;
+  background: #1F1D2B;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  color: var(--white, #FFF);
+  font-family: Barlow;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  margin-bottom: 68px;
+}
+.main-section main .choose-title div i {
+  margin-right: 10px;
+}
+.main-section .main-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 192px);
+  grid-column-gap: 28px;
+  justify-content: center;
+}
+.main-section .main-container .main-content {
+  width: 192px;
+  height: 226px;
+  background-color: #1f1d2b;
+  border-radius: 8px;
+  text-align: center;
+  padding: 0 24px 24px 24px;
+  margin-bottom: 58px;
+  cursor: pointer;
+}
+.main-section .main-container .main-content .main-content-img {
+  position: relative;
+  height: 100px;
+  margin-bottom: 14px;
+}
+.main-section .main-container .main-content .main-content-img img {
+  width: 149.612px;
+  height: 135.764px;
+  position: absolute;
+  top: -35px;
+  left: -1px;
+}
+.main-section .main-container .main-content .main-content-title {
+  text-align: center;
+}
+.main-section .main-container .main-content .main-content-title .main-content-text {
+  color: #FFF;
+  font-family: Barlow;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  width: 144px;
+  margin: 0;
+}
+.main-section .main-container .main-content .main-content-title .main-content-price {
+  color: #FFF;
+  font-family: Barlow;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  margin: 8px 0 4px 0;
+}
+.main-section .main-container .main-content .main-content-title .main-content-description {
+  color: #ABBBC2;
+  text-align: center;
+  font-family: Barlow;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.orders-section {
+  min-width: 409px;
+}
+.orders-section .orders-container {
+  padding: 24px;
+  border-radius: 8px;
+  background: #1F1D2B;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.orders-section .order-container {
+  position: relative;
+}
+.orders-section .orders-header {
+  border-bottom: 1px solid #393C49;
+  margin-bottom: 24px;
+}
+.orders-section .orders-header h2 {
+  color: #FFF;
+  font-family: Barlow;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+.orders-section .orders-header .orders-header-ul {
+  display: flex;
+  list-style: none;
+  margin: 24px 0;
+  padding: 0;
+  width: 100%;
+}
+.orders-section .orders-header .orders-header-ul li {
+  margin-right: 8px;
+  border-radius: 8px;
+  border: 1px solid #393C49;
+  background: #1F1D2B;
+  padding: 7px 12px;
+  color: #EA7C69;
+  font-family: Barlow;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+.orders-section .orders-header .orders-header-ul .order-item-active {
+  background-color: #EA7C69;
+  color: #fff;
+}
+.orders-section .orders-header .check-title {
+  margin-bottom: 24px;
+}
+.orders-section .orders-header .check-title ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  justify-content: flex-end;
+  width: 100%;
+}
+.orders-section .orders-header .check-title ul li {
+  margin-left: 43px;
+  color: #FFF;
+  font-family: Barlow;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+.orders-section .orders-header .check-title ul li:nth-child(1) {
+  margin: 0 180px 0 0;
+}
+.orders-section .orders-content .orders-content-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.orders-section .orders-content .orders-content-title .orders-content-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
+.orders-section .orders-content .orders-content-title .orders-content-img img {
+  width: 40px;
+  height: 40px;
+}
+.orders-section .orders-content .orders-content-title .orders-content-text {
+  border-color: #1f1d2b;
+  margin-right: 67px;
+}
+.orders-section .orders-content .orders-content-title .orders-content-text h3 {
+  color: #FFF;
+  font-family: Barlow;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  margin: 0;
+}
+.orders-section .orders-content .orders-content-title .orders-content-text span {
+  color: #ABBBC2;
+  font-family: Barlow;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+.orders-section .orders-content .orders-content-title .qty {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #393C49;
+  background: #2D303E;
+  color: #FFF;
+  font-family: Barlow;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  margin-right: 21px;
+}
+.orders-section .orders-content .orders-content-title .order-price {
+  color: #FFF;
+  text-align: right;
+  font-family: Barlow;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+.orders-section .orders-content .delete-content {
+  display: flex;
+}
+.orders-section .orders-content .delete-content input {
+  border-radius: 8px;
+  border: 1px solid #393C49;
+  background: #2D303E;
+  padding: 14px 91px 14px 14px;
+  margin-right: 16px;
+  outline: none;
+  color: #fff;
+}
+.orders-section .orders-content .delete-content input::-moz-placeholder {
+  color: #E0E6E9;
+  font-family: Barlow;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.orders-section .orders-content .delete-content input:-ms-input-placeholder {
+  color: #E0E6E9;
+  font-family: Barlow;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.orders-section .orders-content .delete-content input::placeholder {
+  color: #E0E6E9;
+  font-family: Barlow;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.orders-section .orders-content .delete-content .delete-btn {
+  border-radius: 8px;
+  border: 1px solid #FF7CA3;
+  padding: 14px;
+  font-size: 16px;
+  color: #FF7CA3;
+  background-color: transparent;
+}
+.orders-section .last-price {
+  position: absolute;
+  top: 430px;
+  right: -15px;
+  padding: 0 14px 24px 14px;
+  background-color: #1f1d2b;
+}
+.orders-section .last-price .discount {
+  padding-top: 24px;
+  margin-bottom: 16px;
+  border-top: 1px solid #393C49;
+}
+.orders-section .last-price h4 {
+  color: #ABBBC2;
+  font-family: Barlow;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.orders-section .last-price span {
+  color: #FFF;
+  font-family: Barlow;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+.orders-section .last-price .price-total-btn {
+  border-radius: 8px;
+  background: #EA7C69;
+  box-shadow: 0px 8px 24px 0px rgba(234, 124, 105, 0.3);
+  color: #FAFAFA;
+  font-family: Barlow;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  padding: 14px;
+  width: 361px;
+  border: none;
+  margin-top: 24px;
+}/*# sourceMappingURL=style.css.map */

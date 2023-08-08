@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <section class="d-flex ">
+    <section class="sidebar">
+      <div class="sidebar-container">
+        <div class="logo"><img src="img/Logo.png" alt="logo"></div>
+        <div class="menu">
+          <div class="home menu-active"><i class='bx bx-home-alt'></i></div>
+          <div class="circel"><i class='bx bxs-offer'></i></div>
+          <div class="pie-chart"><i class='bx bx-pie-chart-alt'></i></div>
+          <div class="mail"><i class='bx bx-envelope'></i></div>
+          <div class="bell"><i class='bx bx-bell'></i></div>
+          <div class="settings"><i class='bx bx-cog'></i></div>
+          <div class="exit-icon"><i class='bx bx-exit'></i></div>
+        </div>
+      </div>
+    </section>
+    <section class="main-section">
+      <header>
+        <div class="d-flex justify-content-between">
+          <div class="header-title">
+            <h1 class="header-text">Jaegar Resto</h1>
+            <p class="header-description">Tuesday, 2 Feb 2021</p>
+          </div>
+          <div class="header-search">
+            <i class='bx bx-search'></i> <input type="text" placeholder="Search for food, coffe, etc..">
+          </div>
+        </div>
+        <nav class="d-flex">
+          <ul class="d-flex nav-ul">
+            <li class="hot nav-active">Hot Dishes</li>
+            <li class="cold">Cold Dishes</li>
+            <li class="soup">Soup</li>
+            <li class="grill">Grill</li>
+            <li class="appetizer">Appetizer</li>
+            <li class="dessert">Dessert</li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="d-flex justify-content-between choose-title">
+          <h2>Choose Dishes</h2>
+          <div><i class='bx bx-chevron-down'></i> Dine In</div>
+        </div>
+        <div class="main-container"></div>
+      </main>
+    </section>
+    <section class="orders-section">
+      <div class="orders-container">
+        <div class="order-container">
+          <div class="orders-header">
+            <h2>Orders #34562</h2>
+            <ul class="orders-header-ul">
+              <li class="order-item-active">Dine In</li>
+              <li>To Go</li>
+              <li>Delivery</li>
+            </ul>
+            <div class="check-title">
+              <ul>
+                <li>Item</li>
+                <li>Qty</li>
+                <li>Price</li>
+              </ul>
+            </div>
+          </div>
+          <div class="orders-main">
+            <div class="orders-content"></div>
+  
+            <div class="last-price">
+              <div class="discount d-flex justify-content-between">
+                <h4>Discount</h4>
+                <span>$0</span>
+              </div>
+              <div class="price-total d-flex justify-content-between">
+                <h4>Sub total</h4>
+                <span>$ 21,03</span>
+              </div>
+              <button type="button" class="price-total-btn">Continue to Payment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
