@@ -34,7 +34,7 @@ let menuContent = [
   { image: "img/image 5.png", text: "Healthy noodle with spinach leaf", price: "3.29", description: "22 Bowls available", menuFood: "Cold Dishes" },
   { image: "img/image 5.png", text: "Hot spicy fried rice with omeletf", price: "3.49", description: "13 Bowls available", menuFood: "Grill" },
   { image: "img/image 6.png", text: "Spicy instant noodle with special omelette", price: "3.59", description: "17 Bowls available", menuFood: "Grill" },
-  { image: "img/image 6.png", text: "HERING SALAT 200g", price: "2.59", description: "15 Bowls available", menuFood: "Cold Dishes", menuFood: "Appetizer" }
+  { image: "img/image 6.png", text: "HERING SALAT 200g", price: "2.59", description: "15 Bowls available", menuFood: "Appetizer" }
 ];
 
 function menuContentFunc() {
