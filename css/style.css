@@ -223,6 +223,9 @@ section.sidebar .sidebar-container .menu div {
 
 .orders-section {
   min-width: 409px;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 .orders-section .orders-container {
   padding: 24px;
@@ -279,7 +282,6 @@ section.sidebar .sidebar-container .menu div {
   list-style: none;
   display: flex;
   padding: 0;
-  justify-content: flex-end;
   width: 100%;
 }
 .orders-section .orders-header .check-title ul li {
@@ -294,9 +296,31 @@ section.sidebar .sidebar-container .menu div {
 .orders-section .orders-header .check-title ul li:nth-child(1) {
   margin: 0 180px 0 0;
 }
+.orders-section .orders-content {
+  background-color: transparent;
+  position: relative;
+  height: 600px;
+  overflow: scroll;
+}
+.orders-section .orders-content::-webkit-scrollbar {
+  width: 1px;
+}
+.orders-section .orders-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.orders-section .orders-content::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+.orders-section .orders-content ::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+.orders-section .orders-content .orders-content-div {
+  margin-bottom: 24px;
+}
 .orders-section .orders-content .orders-content-title {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 10px;
 }
 .orders-section .orders-content .orders-content-title .orders-content-img {
@@ -320,6 +344,7 @@ section.sidebar .sidebar-container .menu div {
   font-weight: 500;
   line-height: 130%;
   margin: 0;
+  width: 140px;
 }
 .orders-section .orders-content .orders-content-title .orders-content-text span {
   color: #ABBBC2;
@@ -353,6 +378,7 @@ section.sidebar .sidebar-container .menu div {
 }
 .orders-section .orders-content .delete-content {
   display: flex;
+  justify-content: space-between;
 }
 .orders-section .orders-content .delete-content input {
   border-radius: 8px;
@@ -362,6 +388,7 @@ section.sidebar .sidebar-container .menu div {
   margin-right: 16px;
   outline: none;
   color: #fff;
+  width: 297px;
 }
 .orders-section .orders-content .delete-content input::-moz-placeholder {
   color: #E0E6E9;
@@ -397,7 +424,7 @@ section.sidebar .sidebar-container .menu div {
 }
 .orders-section .last-price {
   position: absolute;
-  top: 430px;
+  top: 436px;
   right: -15px;
   padding: 0 14px 24px 14px;
   background-color: #1f1d2b;

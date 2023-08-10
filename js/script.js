@@ -56,50 +56,15 @@ function menuContentFunc() {
 }
 
 function navbarItemFilter(e) {
+  let menuContentTitles = document.querySelectorAll(".main-content");
   for (let i = 0; i < menuContent.length; i++) {
-    document.querySelectorAll(".main-content-title").forEach((item) => {
-      let todo = menuContent[i].menuFood;
-      switch (e.target.textContent) {
-        case "Hot Dishes":
-            item.parentNode.style.display = "grid";
-          break;
-        case "Cold Dishes":
-          if (todo == "Cold Dishes") {
-            item.parentNode.style.display = "grid";
-          } else {
-            item.parentNode.style.display = "none";
-          }
-          break;
-        case "Soup":
-          if (todo == "Soup") {
-            item.parentNode.style.display = "grid";
-          } else {
-            item.parentNode.style.display = "none";
-          }
-          break;
-        case "Grill":
-          if (todo == "Grill") {
-            item.parentNode.style.display = "grid";
-          } else {
-            item.parentNode.style.display = "none";
-          }
-          break;
-        case "Appetizer":
-          if (todo == "Appetizer") {
-            item.parentNode.style.display = "grid";
-          } else {
-            item.parentNode.style.display = "none";
-          }
-          break;
-        case "Dessert":
-          if (todo == "Dessert") {
-            item.parentNode.style.display = "grid";
-          } else {
-            item.parentNode.style.display = "none";
-          }
-          break;
-      }
-    })
+    if (e.target.textContent == menuContent[i].menuFood) {
+      menuContentTitles[i].style.display = 'grid';
+    } else if (e.target.textContent == 'Hot Dishes') {
+      menuContentTitles[i].style.display = 'grid';
+    } else {
+      menuContentTitles[i].style.display = 'none';
+    }
   }
 }
 
@@ -117,30 +82,29 @@ function searchFilter(e) {
 
 
 function ordersContentFunc() {
-  menuContent.forEach((item) => {
-    document.querySelectorAll(".Appetizer").forEach((i) => {
-      i.addEventListener("click", () => {
-        // document.querySelector(".orders-section").style.display = "block"
-        let row = document.createElement("div");
-        row.innerHTML = `
-        <div class="orders-content-title">
-          <div class="orders-content-img"><img src="${item.image}" alt="img"></div>
-          <div class="orders-content-text">
-            <h3>${item.text}</h3>
-            <span>$ ${item.price}</span>
-          </div>
-          <p class="qty">0</p>
-          <p class="order-price">$ 4,58</p>
-        </div>
-        <div class="delete-content">
-          <input type="text" placeholder="Please, just a little bit spicy only.">
-          <button type="button" class="delete-btn"><i class='bx bx-trash-alt'></i></button>
-        </div>
-    `
-        ordersContent.append(row);
-      })
+  for (let i = 0; i < menuContent.length; i++) {
+    document.querySelectorAll(".main-content")[i].addEventListener("click", () => {
+      let a = menuContent[i], x = 0;
+      let row = document.createElement("div");
+      row.classList.add("orders-content-div")
+      row.innerHTML = `
+              <div class="orders-content-title">
+                <div class="orders-content-img"><img src="${a.image}" alt="img"></div>
+                <div class="orders-content-text">
+                  <h3>${a.text}</h3>
+                  <span>$ ${a.price}</span>
+                </div>
+                <p class="qty">0</p>
+                <p class="order-price">$ ${Number(x += a.price)}</p>
+              </div>
+              <div class="delete-content">
+                <input type="text" placeholder="Please, just a little bit spicy only.">
+                <button type="button" class="delete-btn"><i class='bx bx-trash-alt'></i></button>
+              </div>
+          `
+      ordersContent.append(row);
     })
-  })
+  }
 };
 
 ordersContentFunc();
