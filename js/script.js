@@ -82,27 +82,29 @@ function searchFilter(e) {
 
 
 function ordersContentFunc() {
-  for (let i = 0; i < menuContent.length; i++) {
-    document.querySelectorAll(".main-content")[i].addEventListener("click", () => {
-      let a = menuContent[i], x = 0;
-      let row = document.createElement("div");
-      row.classList.add("orders-content-div")
-      row.innerHTML = `
-              <div class="orders-content-title">
-                <div class="orders-content-img"><img src="${a.image}" alt="img"></div>
-                <div class="orders-content-text">
-                  <h3>${a.text}</h3>
-                  <span>$ ${a.price}</span>
-                </div>
-                <p class="qty">0</p>
-                <p class="order-price">$ ${Number(x += a.price)}</p>
-              </div>
-              <div class="delete-content">
-                <input type="text" placeholder="Please, just a little bit spicy only.">
-                <button type="button" class="delete-btn"><i class='bx bx-trash-alt'></i></button>
-              </div>
-          `
-      ordersContent.append(row);
+    let contentMain = document.querySelectorAll(".main-content");
+  for (let i = 0; i < contentMain.length; i++) {
+    contentMain[i].addEventListener("click", () => {
+      console.log("hello");
+      // let a = menuContent[i], x = 0;
+      // let row = document.createElement("div");
+      // row.classList.add("orders-content-div")
+      // row.innerHTML = `
+      //         <div class="orders-content-title">
+      //           <div class="orders-content-img"><img src="${a.image}" alt="img"></div>
+      //           <div class="orders-content-text">
+      //             <h3>${a.text}</h3>
+      //             <span>$ ${a.price}</span>
+      //           </div>
+      //           <p class="qty">0</p>
+      //           <p class="order-price">$ ${Number(x += a.price)}</p>
+      //         </div>
+      //         <div class="delete-content">
+      //           <input type="text" placeholder="Please, just a little bit spicy only.">
+      //           <button type="button" class="delete-btn"><i class='bx bx-trash-alt'></i></button>
+      //         </div>
+      //     `
+      // ordersContent.append(row);
     })
   }
 };
