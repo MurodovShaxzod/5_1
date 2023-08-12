@@ -222,6 +222,7 @@ section.sidebar .sidebar-container .menu div {
 }
 
 .orders-section {
+  overflow: hidden;
   min-width: 409px;
   position: relative;
   top: 0;
@@ -447,13 +448,16 @@ section.sidebar .sidebar-container .menu div {
   font-weight: 400;
   line-height: 140%;
 }
-.orders-section .last-price span {
+.orders-section .last-price p {
   color: #FFF;
   font-family: Barlow;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 140%;
+}
+.orders-section .last-price .price-total h4 {
+  width: 340px;
 }
 .orders-section .last-price .price-total-btn {
   border-radius: 8px;

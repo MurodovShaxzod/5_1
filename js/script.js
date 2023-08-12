@@ -82,10 +82,10 @@ function searchFilter(e) {
 
 
 function ordersContentFunc() {
-  let contentMain = document.querySelectorAll(".main-content"), z = 0;
+  let contentMain = document.querySelectorAll(".main-content"), x = 0, z = 0;
   for (let i = 0; i < contentMain.length; i++) {
     contentMain[i].addEventListener("click", () => {
-      let a = menuContent[i], x = 0;
+      let a = menuContent[i];
       let row = document.createElement("div");
       row.classList.add("orders-content-div")
       row.innerHTML = `
@@ -96,7 +96,7 @@ function ordersContentFunc() {
                   <span>$ ${a.price}</span>
                 </div>
                 <p class="qty">${z+= 1}</p>
-                <p class="order-price">$ ${Number(x += a.price)}</p>
+                <p class="order-price">$ ${(Number(x += eval(a.price))).toFixed(2)}</p>
               </div>
               <div class="delete-content">
                 <input type="text" placeholder="Please, just a little bit spicy only.">
@@ -104,6 +104,9 @@ function ordersContentFunc() {
               </div>
           `
       ordersContent.append(row);
+
+      let lastPriceSpan = document.querySelector(".price-total p span");
+      lastPriceSpan.textContent = x.toFixed(2);
 
       let deleteBtn = row.querySelector(".delete-btn");
       deleteBtn.addEventListener("click", () => {

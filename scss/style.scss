@@ -244,6 +244,7 @@ section.sidebar {
 
 .orders-section {
   // display: none;
+  overflow: hidden;
   min-width: 409px;
   position: relative;
   top: 0;
@@ -487,13 +488,17 @@ section.sidebar {
       line-height: 140%;
     }
 
-    span {
+    p {
       color: #FFF;
       font-family: Barlow;
       font-size: 16px;
       font-style: normal;
       font-weight: 500;
       line-height: 140%;
+    }
+
+    .price-total h4 {
+      width: 340px;
     }
 
     .price-total-btn {
