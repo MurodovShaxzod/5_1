@@ -421,11 +421,16 @@ section.sidebar .sidebar-container .menu div {
   font-size: 16px;
   color: #FF7CA3;
   background-color: transparent;
+  transition: 0.4s ease;
+}
+.orders-section .orders-content .delete-content .delete-btn:hover {
+  background-color: #FF7CA3;
+  color: #1f1d2b;
 }
 .orders-section .last-price {
-  position: absolute;
-  top: 436px;
-  right: -15px;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
   padding: 0 14px 24px 14px;
   background-color: #1f1d2b;
 }

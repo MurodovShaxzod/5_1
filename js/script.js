@@ -82,33 +82,40 @@ function searchFilter(e) {
 
 
 function ordersContentFunc() {
-    let contentMain = document.querySelectorAll(".main-content");
+  let contentMain = document.querySelectorAll(".main-content"), z = 0;
   for (let i = 0; i < contentMain.length; i++) {
     contentMain[i].addEventListener("click", () => {
-      console.log("hello");
-      // let a = menuContent[i], x = 0;
-      // let row = document.createElement("div");
-      // row.classList.add("orders-content-div")
-      // row.innerHTML = `
-      //         <div class="orders-content-title">
-      //           <div class="orders-content-img"><img src="${a.image}" alt="img"></div>
-      //           <div class="orders-content-text">
-      //             <h3>${a.text}</h3>
-      //             <span>$ ${a.price}</span>
-      //           </div>
-      //           <p class="qty">0</p>
-      //           <p class="order-price">$ ${Number(x += a.price)}</p>
-      //         </div>
-      //         <div class="delete-content">
-      //           <input type="text" placeholder="Please, just a little bit spicy only.">
-      //           <button type="button" class="delete-btn"><i class='bx bx-trash-alt'></i></button>
-      //         </div>
-      //     `
-      // ordersContent.append(row);
+      let a = menuContent[i], x = 0;
+      let row = document.createElement("div");
+      row.classList.add("orders-content-div")
+      row.innerHTML = `
+              <div class="orders-content-title">
+                <div class="orders-content-img"><img src="${a.image}" alt="img"></div>
+                <div class="orders-content-text">
+                  <h3>${a.text}</h3>
+                  <span>$ ${a.price}</span>
+                </div>
+                <p class="qty">${z+= 1}</p>
+                <p class="order-price">$ ${Number(x += a.price)}</p>
+              </div>
+              <div class="delete-content">
+                <input type="text" placeholder="Please, just a little bit spicy only.">
+                <button type="button" class="delete-btn"><i class='bx bx-trash-alt'></i></button>
+              </div>
+          `
+      ordersContent.append(row);
+
+      let deleteBtn = row.querySelector(".delete-btn");
+      deleteBtn.addEventListener("click", () => {
+        deleteBtn.parentNode.parentNode.remove();
+      })
     })
   }
 };
 
-ordersContentFunc();
+
+
 
 menuContentFunc();
+ordersContentFunc();
+
